@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
-import { Logo, FormRow } from '../components';
+import { Logo, FormRow, CustomButton } from '../components';
 
 const RegisterPage = () => {
 	return (
@@ -44,12 +44,7 @@ const RegisterPage = () => {
 					labelText="Re-enter Password"
 					defaultValue="password"
 				/>
-
-				<button
-					type="submit"
-					className="btn btn-block">
-					Submit
-				</button>
+				<CustomButton type="submit" />
 				<p>
 					Already a user?{' '}
 					<Link
