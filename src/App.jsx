@@ -1,14 +1,19 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import HomeLayout from './pages/HomeLayout';
 //router used imported from npm i react-router-dom
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <h1>Home</h1>,
+		element: <HomeLayout />,
 	},
 	{
 		path: '/about',
-		element: <h1>About</h1>,
+		element: (
+			<div>
+				<h1>About</h1>
+			</div>
+		),
 	},
 ]);
 
