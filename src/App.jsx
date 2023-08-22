@@ -15,6 +15,10 @@ const router = createBrowserRouter([
 		element: <HomeLayout />,
 		children: [
 			{
+				index: true, //Used to show the default content for the layout
+				element: <LandingPage />,
+			},
+			{
 				path: 'register',
 				element: <RegisterPage />,
 			},
@@ -27,10 +31,6 @@ const router = createBrowserRouter([
 				element: <DashboardLayout />,
 			},
 		],
-	},
-	{
-		path: '/landing',
-		element: <LandingPage />,
 	},
 
 	{
