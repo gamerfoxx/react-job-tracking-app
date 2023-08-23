@@ -6,6 +6,11 @@ import {
 	LoginPage,
 	DashboardLayout,
 	ErrorPage,
+	AddJobPage,
+	StatsPage,
+	AllJobsPage,
+	ProfilePage,
+	AdminPage,
 } from './pages';
 //router used imported from npm i react-router-dom
 
@@ -30,6 +35,28 @@ const router = createBrowserRouter([
 			{
 				path: 'dashboard',
 				element: <DashboardLayout />,
+				children: [
+					{
+						index: true, //Used to show the default content for the layout
+						element: <AddJobPage />,
+					},
+					{
+						path: 'stats',
+						element: <StatsPage />,
+					},
+					{
+						path: 'all-jobs',
+						element: <AllJobsPage />,
+					},
+					{
+						path: 'profile',
+						element: <ProfilePage />,
+					},
+					{
+						path: 'admin',
+						element: <AdminPage />,
+					},
+				],
 			},
 		],
 	},
