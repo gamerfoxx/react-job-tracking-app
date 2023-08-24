@@ -47,6 +47,6 @@ const DashboardLayout = () => {
 		</DashboardContext.Provider>
 	);
 };
-
+console.log('test');
 export const useDashboardContext = () => useContext(DashboardContext);
 export default DashboardLayout;
