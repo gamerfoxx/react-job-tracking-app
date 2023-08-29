@@ -16,6 +16,7 @@ const DashboardLayout = () => {
 	}
 
 	function toggleDarkTheme() {
+		console.log(!showSidebar);
 		setShowSidebar(!showSidebar);
 	}
 
