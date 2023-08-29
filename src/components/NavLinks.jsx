@@ -2,7 +2,8 @@ import { useDashboardContext } from '../pages/DashboardLayout';
 import links from '../utils/links';
 import { NavLink } from 'react-router-dom';
 
-export const NavLinks = () => {
+// eslint-disable-next-line react/prop-types
+export const NavLinks = ({ isLarge }) => {
 	const { toggleSidebar } = useDashboardContext();
 	return (
 		<div className="nav-links">
@@ -13,7 +14,7 @@ export const NavLinks = () => {
 						to={path}
 						key={text}
 						className="nav-link"
-						onClick={toggleSidebar}
+						onClick={isLarge ? null : toggleSidebar}
 						end>
 						<span className="icon">{icon}</span>
 						{text}
